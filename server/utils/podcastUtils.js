@@ -235,7 +235,7 @@ module.exports.getPodcastFeed = (feedUrl, excludeEpisodeMetadata = false) => {
     responseType: 'arraybuffer',
     headers: {
       Accept: 'application/rss+xml, application/xhtml+xml, application/xml, */*;q=0.8',
-      'User-Agent': 'audiobookshelf'
+      'User-Agent': global.UserAgent
     },
     httpAgent: global.DisableSsrfRequestFilter ? null : ssrfFilter(feedUrl),
     httpsAgent: global.DisableSsrfRequestFilter ? null : ssrfFilter(feedUrl)
