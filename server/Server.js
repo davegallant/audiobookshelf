@@ -54,7 +54,6 @@ class Server {
     global.XAccel = process.env.USE_X_ACCEL
     global.AllowCors = process.env.ALLOW_CORS === '1'
     global.DisableSsrfRequestFilter = process.env.DISABLE_SSRF_REQUEST_FILTER === '1'
-    global.UserAgent = process.env.USER_AGENT || 'audiobookshelf (+https://audiobookshelf.org; like iTMS)'
 
     if (!fs.pathExistsSync(global.ConfigPath)) {
       fs.mkdirSync(global.ConfigPath)
